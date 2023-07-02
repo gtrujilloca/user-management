@@ -12,6 +12,8 @@ const secret =
 
 const pictureBaseUrl = process.env.IMAGES_URL;
 
+const PORT = process.env.PORT || 3000;
+
 const app = express();
 
 app.use(cors());
@@ -239,4 +241,4 @@ app.delete(
   }
 );
 
-app.listen(8080, () => console.log("running localhost:8080"));
+app.listen(PORT, () => console.log(`running localhost: ${PORT}`));
